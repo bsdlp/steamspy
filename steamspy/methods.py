@@ -18,7 +18,7 @@ class APIHelper(object):
         :rtype:  ``dict``
         """
         params['request'] = self.__class__.__name__.lower()
-        resp = requests._get(self._API_URL, params=param)
+        resp = requests.get(self._API_URL, params=param)
         return resp.json()
 
 
