@@ -31,7 +31,6 @@ setup(
         'Programming Language :: Python :: 3.4',
     ],
     install_requires=[
-        'classdirectory==0.0.4',
         'requests==2.7.0',
     ],
 )
