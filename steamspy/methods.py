@@ -7,7 +7,7 @@ class APIHelper(object):
     _API_URL = 'http://steamspy.com/api.php'
 
     def __init__(self):
-        self.game = Game(**self._get())
+        self.games = [Game(**game) for game in self._get().values()]
 
     def _get(self, params={}):
         """
