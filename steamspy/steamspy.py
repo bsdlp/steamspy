@@ -1,5 +1,5 @@
 from classdirectory import ClassDirectory
-import .methods
+from . import methods
 
 
 class SteamSpy(object):
