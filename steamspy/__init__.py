@@ -1,0 +1,1 @@
+from .steamspy import SteamSpy
