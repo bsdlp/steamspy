@@ -6,20 +6,30 @@
 Welcome to steamspy's documentation!
 ====================================
 
-Contents:
+Submodules
+----------
 
-.. toctree::
-   :maxdepth: 2
+steamspy.methods module
+-----------------------
+
+.. automodule:: steamspy.methods
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+steamspy.objects module
+-----------------------
+
+.. automodule:: steamspy.objects
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
 
 .. automodule:: steamspy
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-.. automodule:: steamspy
+    :members:
+    :undoc-members:
+    :show-inheritance:
