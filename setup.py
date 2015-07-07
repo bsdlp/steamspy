@@ -33,4 +33,9 @@ setup(
     install_requires=[
         'requests==2.7.0',
     ],
+    extras_require={
+        'docs': [
+            'sphinx==1.3.1',
+        ],
+    },
 )
