@@ -5,9 +5,16 @@ from .objects import Game
 
 class APIHelper(object):
     _API_URL = 'http://steamspy.com/api.php'
+    _attribute = None
 
     def __init__(self):
-        self.games = [Game(**game) for game in self._get().values()]
+        _games = (Game(**game) for game in self._get().values())
+        if self._attribute:
+            self.games = sorted(
+                _games, reverse=True,
+                key=lambda game: getattr(game, self._attribute))
+        else:
+            self.games = list(_games)
 
     def _get(self, params={}):
         """
@@ -41,11 +48,11 @@ class Genre(APIHelper):
 
 
 class Top100In2Weeks(APIHelper):
-    pass
+    _attribute = 'players_2weeks'
 
 
 class Top100Forever(APIHelper):
-    pass
+    _attribute = 'players_forever'
 
 
 class Top100Owned(APIHelper):
