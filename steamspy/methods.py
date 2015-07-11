@@ -9,6 +9,8 @@ class APIHelper(object):
 
     def __init__(self):
         _games = (Game(**game) for game in self._get().values())
+        # remove bogus 999999 app inserted by steamspy api
+        _games = filter(lambda x: x.appid != 999999, _games)
         if self._attribute:
             self.games = sorted(
                 _games, reverse=True,
